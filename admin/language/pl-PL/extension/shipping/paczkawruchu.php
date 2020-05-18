@@ -18,7 +18,7 @@ $_ = [
     'text_extension' => 'Rozszerzenia',
 
     'text_author' => 'Moduł Opencart Paczka w Ruchu został udostępniony za darmo, dlatego prosimy wszystkich jego użytkowników o dobrowolne finansowe wsparcie autora. Dzięki waszym datkom będę w stanie dalej rozwijać ten i pozostałe darmowe moduły do Opencarta. Zgłoszenia błędów <a href="https://github.com/avatec/opencart-paczkawruchu/issues">tutaj</a>.',
-    'text_info' => 'Uzyskaj ID i KLUCZ partnera na stronie <a href="https://www.paczkawruchu.pl/korzystaj-z-paczki-w-ruchu/" target="_blank">Paczka w ruchu</a>. Klucze testowe (ID: TEST000371, Hasło: 80032338EB)',
+    'text_info' => 'Uzyskaj ID i KLUCZ partnera na stronie <a href="https://www.paczkawruchu.pl/korzystaj-z-paczki-w-ruchu/" target="_blank">Paczka w ruchu</a>. Klucze testowe (ID: TEST000601, Hasło: B87FDC41E2)',
 
     'entry_api_id' => 'ID partnera',
     'entry_api_key' => 'Klucz partera',
