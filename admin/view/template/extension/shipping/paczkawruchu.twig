@@ -116,8 +116,7 @@
         </div>
 
         <div class="row">
-            <form method="get">
-            <div id="filter-customer" class="col-md-3 col-md-push-9 col-sm-12 hidden-sm hidden-xs">
+            <div id="filter-paczkawruchu" class="col-md-3 col-md-push-9 col-sm-12 hidden-sm hidden-xs">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">
@@ -126,22 +125,17 @@
                     </div>
                     <div class="panel-body">
                         <div class="form-group">
-                            <label class="control-label" for="input-name">{{ entry_postcode }}</label>
-                            <input type="text" name="filter_postcode" value="{{ filter_postcode }}" placeholder="{{ entry_postcode }}" id="input-name" class="form-control"/>
-                        </div>
-                        <div class="form-group">
                             <label class="control-label" for="input-email">{{ entry_city }}</label>
                             <input type="text" name="filter_city" value="{{ filter_city }}" placeholder="{{ entry_city }}" id="input-email" class="form-control"/>
                         </div>
                         <div class="form-group text-right">
-                            <button type="submit" id="button-filter" class="btn btn-default">
+                            <button type="button" id="button-filter" class="btn btn-default">
                                 <i class="fa fa-filter"></i>
                                 {{ button_filter }}</button>
                         </div>
                     </div>
                 </div>
             </div>
-            </form>
             <div class="col-md-9 col-md-pull-3 col-sm-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -224,6 +218,15 @@
                         }
                     }
                 });
+            });
+
+            $("#button-filter").on('click' , function() {
+                url = 'index.php?route=extension/shipping/paczkawruchu&user_token={{ user_token }}';
+                var filter_city = $('input[name=\'filter_city\']').val();
+                if (filter_city) {
+                  url += '&filter_city=' + encodeURIComponent(filter_city);
+                }
+                location = url;
             });
         });
     </script>

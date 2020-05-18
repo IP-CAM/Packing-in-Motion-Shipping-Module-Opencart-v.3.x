@@ -124,7 +124,16 @@ class ControllerExtensionShippingPaczkawruchu extends Controller {
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
-        $paczkawruchu_list = $this->db->query("SELECT * FROM `" . DB_PREFIX . "shipping_paczkawruchu` ORDER BY City");
+        if (!empty($this->request->get['filter_city'])) {
+            $filter['city'] = "CITY = '" . $this->request->get['filter_city'] . "'";
+            $data['filter_city'] = $this->request->get['filter_city'];
+        }
+
+        if( !empty( $filter )) {
+            $query = "WHERE " . implode( " AND " , $filter );
+        }
+
+        $paczkawruchu_list = $this->db->query("SELECT * FROM `" . DB_PREFIX . "shipping_paczkawruchu` " . (!empty( $query) ? $query : "") . " ORDER BY City");
         $history_total = $paczkawruchu_list->num_rows;
         $data['paczkawruchu_list'] = $paczkawruchu_list->rows;
 
