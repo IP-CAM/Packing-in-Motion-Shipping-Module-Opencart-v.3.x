@@ -10,6 +10,8 @@ class ModelExtensionShippingPaczkawruchu extends Model {
     public function getQuote( $address )
     {
         $this->load->language('extension/shipping/paczkawruchu');
+	    
+	$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "shipping_paczkawruchu WHERE City = '" . ucfirst(strtolower($address['city'])) . "'");
 
         if (!$this->config->get('shipping_free_geo_zone_id')) {
 			$status = true;
@@ -26,9 +28,8 @@ class ModelExtensionShippingPaczkawruchu extends Model {
         $method_data = array();
 
         if ($status) {
-			$quote_data = array();
+		$quote_data = array();
 
-            $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "shipping_paczkawruchu WHERE City = '" . ucfirst(strtolower($address['city'])) . "'");
             foreach( $query->rows as $item ) {
                 if( !empty( $item['DestinationCode'])) {
                     $paczkawruchu_id = 'paczkawruchu_' . $item['DestinationCode'];
