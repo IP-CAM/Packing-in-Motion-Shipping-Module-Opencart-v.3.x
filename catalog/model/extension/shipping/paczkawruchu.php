@@ -11,7 +11,7 @@ class ModelExtensionShippingPaczkawruchu extends Model {
     {
         $this->load->language('extension/shipping/paczkawruchu');
 
-        if (!$this->config->get('shipping_free_geo_zone_id')) {
+        if (!$this->config->get('shipping_paczkawruchu_geo_zone_id')) {
 			$status = true;
 		} elseif ($query->num_rows) {
 			$status = true;
@@ -19,9 +19,11 @@ class ModelExtensionShippingPaczkawruchu extends Model {
 			$status = false;
 		}
 
-        if ($this->cart->getSubTotal() < $this->config->get('shipping_free_total')) {
+        /**
+        if ($this->cart->getSubTotal() < $this->config->get('shipping_paczkawruchu_total')) {
 			$status = false;
 		}
+        **/
 
         $method_data = array();
 
@@ -41,26 +43,6 @@ class ModelExtensionShippingPaczkawruchu extends Model {
         			);
                 }
             }
-
-            /**
-            $modal = '<div id="paczkawruchuModalMap" class="modal fade" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Zamknij"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title">Wybierz punkt odbioru</h4>
-                        </div>
-                        <div class="modal-body">
-                            <div class="paczkawruchu-google-map" data-lat="" data-lng="" data-zoom=""></div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">' . $this->language->get('button_close') . '</button>
-                            <button type="button" class="btn btn-primary">' . $this->language->get('button_select') . '</button>
-                        </div>
-                    </div>
-                </div>
-            </div>';
-            **/
 
 			$method_data = array(
 				'code'       => 'paczkawruchu',
