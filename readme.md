@@ -1,13 +1,13 @@
-# Opencart Paczka w Ruchu - moduł wysyłki
-Przedstawiam Państwu mój autorski moduł wysyłki Paczka w Ruchu do Opencarta w wersji 3.0. Moduł można wykorzystywać w celach komercyjnych.
+# OpenCart package in motion - shipping module
+I present to you my proprietary shipping module package to OpenCarta version 3.0. The module can be used for commercial purposes.
 
-# Instalacja
-Pobierz paczkę zip do Twojej wersji opencarta i zainstaluj ją korzystając z instalatora wbudowanego w Opencart
+# Installation
+Download Zip package to your OpenCart version and install it using the installer built into OpenCart
 
-# Wsparcie
-Moduł został udostępniony za darmo, dlatego prosimy wszystkich jego użytkowników o dobrowolne finansowe wsparcie autora. Dzięki waszym datkom będę w stanie dalej rozwijać ten i pozostałe darmowe moduły do Opencarta.
+# Support
+The module has been shared for free, so we ask all of its users about voluntary financial support. Thanks to your donations, I will continue to develop this and other free modules for OpenCart.
 
-Wesprzyj rozwój tego oprogramowania - https://paypal.me/pools/c/8p6PzJtLZ3
+Support the development of this software - https://paypal.me/pools/c/8p6pjstlz3
 
-# Możliwe problemy
-Jeżeli po instalacji, brakuje opisów, skopiuj pliki tłumaczenia language/pl-PL/extension/shipping do właściwego katalogu w Twoim sklepie.
+# Possible problems
+If after installation, descriptions are missing, copy the translation files of Language / en-en / exttension / shipping to the correct directory in your store.
